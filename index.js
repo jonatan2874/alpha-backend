@@ -1,11 +1,13 @@
 const express = require('express');
 require('dotenv').config();
-
+const cors =  require('cors');
 console.log(process)
 
 //create server app
 const app = express();
-//database
+
+// CORS
+app.use(cors());
 
 //lectura y parseo body
 app.use(express.json());
